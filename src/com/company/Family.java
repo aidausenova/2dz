@@ -1,10 +1,9 @@
 package com.company;
 
-public abstract class Family {
+public class Family implements Printable{
 
     private String name;
     private int age;
-
 
 
     public String getName() {
@@ -21,6 +20,16 @@ public abstract class Family {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public Family(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    @Override
+    public void print() {
+        System.out.println("name: "+name+",age: "+age);
     }
 }
 

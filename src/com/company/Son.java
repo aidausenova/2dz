@@ -2,27 +2,9 @@ package com.company;
 
 public class Son extends Family{
 
-    private String name;
-    private int age;
     private int teeth;
 
-    @Override
-    public String getName() {
-        return name;
-    }
 
-    @Override
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
 
     public int getTeeth() {
         return teeth;
@@ -32,9 +14,15 @@ public class Son extends Family{
         this.teeth = teeth;
     }
 
-    public Son(String name, int age, int teeth) {
-        this.name = name;
-        this.age = age;
+    public Son(int teeth,String name,int age) {
+        super(name,age);
         this.teeth = teeth;
+
+    }
+
+    @Override
+    public void print() {
+        super.print();
+        System.out.println("Teeth: "+teeth);
     }
 }

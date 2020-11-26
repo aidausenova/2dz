@@ -1,27 +1,8 @@
 package com.company;
 
 public class Father extends Family{
-    private String name;
-    private int age;
+
     private int weight;
-
-    @Override
-    public String getName() {
-        return name;
-    }
-
-    @Override
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
 
     public int getWeight() {
         return weight;
@@ -32,9 +13,16 @@ public class Father extends Family{
     }
 
     public Father(String name, int age, int weight) {
-        this.name = name;
-        this.age = age;
+        super(name,age);
         this.weight = weight;
     }
-}
+    @Override
+    public void print() {
+        super.print();
+        System.out.println("weight: "+weight);
+    }
+
+
+    }
+
 

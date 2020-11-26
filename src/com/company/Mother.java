@@ -1,29 +1,36 @@
 package com.company;
 
 public class Mother extends Family{
-    public String name;
-    public int age;
+    private String close;
+    private int height;
 
-    @Override
-    public String getName() {
-        return name;
+    public String getClose() {
+        return close;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setClose(String close) {
+        this.close = close;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public Mother(String name, int age, String close, int height) {
+        super(name, age);
+        this.close = close;
+        this.height = height;
     }
 
     @Override
-    public void setName(String name) {
-        this.name = name;
+    public void print() {
+        super.print();
+        System.out.println("close: "+close+", height: "+height);
     }
 
-    public int getAge() {
-        return age;
-    }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public Mother(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
 }
